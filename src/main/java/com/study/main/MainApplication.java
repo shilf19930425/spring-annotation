@@ -5,10 +5,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.core.env.Environment;
 
-import com.study.config.MainConfig;
+import com.study.config.MainConfig2;
 
 public class MainApplication {
-  ApplicationContext applContext = new AnnotationConfigApplicationContext(MainConfig.class);
+  ApplicationContext applContext = new AnnotationConfigApplicationContext(MainConfig2.class);
 
   public void test01() {
     String[] beanName = applContext.getBeanDefinitionNames();
@@ -22,5 +22,14 @@ public class MainApplication {
     Environment environment = applContext.getEnvironment();
     String property = environment.getProperty("os.name");
     System.out.println(property);
+  }
+
+  @Test
+  public void test03() {
+    String[] beanDefinitionNames = applContext.getBeanDefinitionNames();
+    for (String beanName : beanDefinitionNames) {
+      System.out.println(beanName);
+    }
+
   }
 }

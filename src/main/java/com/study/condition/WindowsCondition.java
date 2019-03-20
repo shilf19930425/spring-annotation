@@ -12,7 +12,6 @@ public class WindowsCondition implements Condition {
    * context : 添加该注解的上下文环境
    * AnnotatedTypeMetadata ：注释信息
    */
-  @Override
   public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
     // TODO 自动生成的方法存根
     //获取ioc的beanfactory信息
