@@ -11,7 +11,6 @@ public class MainApplication {
   ApplicationContext applContext = new AnnotationConfigApplicationContext(MainConfig.class);
 
   public void test01() {
-    ApplicationContext applContext = new AnnotationConfigApplicationContext(MainConfig.class);
     String[] beanName = applContext.getBeanDefinitionNames();
     for (String name : beanName) {
       System.out.println(name);

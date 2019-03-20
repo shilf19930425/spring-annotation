@@ -44,4 +44,16 @@ public class MainConfig2 {
     return new Person();
   }
 
+  /**
+   * 给IOC容器中注册组件
+   * 1.包扫描+注解（@Service,@Repository,@Component,@Controller）注册
+   * 2.@Bean()  (导入第三方组件，就是return new 一个新对象)
+   * 3.@Import() [快速导入组件]
+   *    1) @Import(要导入的组件) 在IOC中默认的ID为全类名
+   *    2) ImportSelector 自定义加载类,要实现ImportSelector接口,返回一个全类名的String[]数组，
+   *    3) ImportBeanDefinitionRegistrar
+   * 
+   * 
+   */
+
 }
