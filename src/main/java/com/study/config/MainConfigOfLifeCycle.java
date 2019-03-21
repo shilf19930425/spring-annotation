@@ -1,7 +1,5 @@
 package com.study.config;
 
-import javax.annotation.PreDestroy;
-
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 
@@ -13,19 +11,22 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
 //        postProcessBeforeInitialization:初始化之前
 //        postProcessAfterInitialization:初始化之后
 public class MainConfigOfLifeCycle implements BeanPostProcessor {
-  @PreDestroy
-  public void test() {
-  }
 
   @Override
   public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-    // TODO Auto-generated method stub
+    // TODO 自动生成的方法存根
     return null;
   }
 
   @Override
   public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-    // TODO Auto-generated method stub
+    // TODO 自动生成的方法存根
     return null;
+  }
+
+  @Override
+  public String toString() {
+    return "MainConfigOfLifeCycle [getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
+      + super.toString() + "]";
   }
 }
